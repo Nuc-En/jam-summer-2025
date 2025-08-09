@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4e6d0niron8f"]
+
+[ext_resource type="Script" uid="uid://b3lpmgad4ehix" path="res://UI/Main Menu/Scripts/next_scene_button_script.gd" id="1_f8q8l"]
+[ext_resource type="PackedScene" uid="uid://dpxymmgdtw2n2" path="res://Stages/Test Level/test_level.tscn" id="2_88nvv"]
+[ext_resource type="Script" uid="uid://ny8nl4ncsecn" path="res://UI/Main Menu/Scripts/out_program.gd" id="3_jcck8"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_right = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AspectRatioContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Label" type="Label" parent="AspectRatioContainer/VBoxContainer"]
+layout_mode = 2
+text = "BLA BLA BLA"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="AspectRatioContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+text = "Start"
+script = ExtResource("1_f8q8l")
+next_scene = ExtResource("2_88nvv")
+
+[node name="Button2" type="Button" parent="AspectRatioContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+text = "-"
+
+[node name="Button3" type="Button" parent="AspectRatioContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+text = "Quit"
+script = ExtResource("3_jcck8")
